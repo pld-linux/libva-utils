@@ -22,9 +22,9 @@ BuildRequires:	wayland-devel >= 1.0.0
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXfixes-devel
-Requires:	libva-drm >= 1.7.3
-Requires:	libva-wayland >= 1.7.3
-Requires:	libva-x11 >= 1.7.3
+Requires:	libva-drm >= 1.8.0
+Requires:	libva-wayland >= 1.8.0
+Requires:	libva-x11 >= 1.8.0
 Provides:	libva-tools = %{version}
 Obsoletes:	libva-tools < 1.8.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
