@@ -1,13 +1,13 @@
 Summary:	VAAPI (Video Acceleration API) utilities
 Summary(pl.UTF-8):	VAAPI (Video Acceleration API) - programy narzędziowe
 Name:		libva-utils
-Version:	1.8.2
+Version:	2.3.0
 Release:	1
 License:	MIT
 Group:		Libraries
-Source0:	https://www.freedesktop.org/software/vaapi/releases/libva/%{name}-%{version}.tar.bz2
-# Source0-md5:	4a8edb92fb0b439f1146adbfa0fba76d
-URL:		https://www.freedesktop.org/wiki/Software/vaapi
+Source0:	https://github.com/intel/libva-utils/archive/%{version}.tar.gz
+# Source0-md5:	89a0d0171a38e979d8be3514855f760c
+URL:		https://01.org/linuxmedia
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	libdrm-devel >= 2.4
@@ -62,7 +62,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc COPYING NEWS
 %attr(755,root,root) %{_bindir}/avcenc
+%attr(755,root,root) %{_bindir}/avcstreamoutdemo
 %attr(755,root,root) %{_bindir}/h264encode
+%attr(755,root,root) %{_bindir}/hevcencode
 %attr(755,root,root) %{_bindir}/jpegenc
 %attr(755,root,root) %{_bindir}/loadjpeg
 %attr(755,root,root) %{_bindir}/mpeg2vaenc
@@ -70,3 +72,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/putsurface
 %attr(755,root,root) %{_bindir}/putsurface_wayland
 %attr(755,root,root) %{_bindir}/vainfo
+%attr(755,root,root) %{_bindir}/vavpp
+%attr(755,root,root) %{_bindir}/vp8enc
+%attr(755,root,root) %{_bindir}/vp9enc
