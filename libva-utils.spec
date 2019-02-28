@@ -1,30 +1,33 @@
+%define	libva_ver	2.1.0
 Summary:	VAAPI (Video Acceleration API) utilities
 Summary(pl.UTF-8):	VAAPI (Video Acceleration API) - programy narzędziowe
 Name:		libva-utils
-Version:	2.3.0
+Version:	2.4.0
 Release:	1
 License:	MIT
 Group:		Libraries
-Source0:	https://github.com/intel/libva-utils/archive/%{version}.tar.gz
-# Source0-md5:	89a0d0171a38e979d8be3514855f760c
+#Source0Download: https://github.com/intel/libva-utils/releases
+Source0:	https://github.com/intel/libva-utils/releases/download/%{version}/%{name}-%{version}.tar.bz2
+# Source0-md5:	f5374c4c32ce136e50aea0267887aed5
 URL:		https://01.org/linuxmedia
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	libdrm-devel >= 2.4
-BuildRequires:	libtool
-BuildRequires:	libva-devel >= 1.7.3
-BuildRequires:	libva-wayland-devel >= 1.7.3
-BuildRequires:	libva-x11-devel >= 1.7.3
+BuildRequires:	libtool >= 2:2
+BuildRequires:	libva-devel >= %{libva_ver}
+BuildRequires:	libva-wayland-devel >= %{libva_ver}
+BuildRequires:	libva-x11-devel >= %{libva_ver}
 BuildRequires:	pkgconfig
-BuildRequires:	pkgconfig(libva) >= 0.39.4
+# VA-API version
+BuildRequires:	pkgconfig(libva) >= 1.1.0
 # wayland-client
 BuildRequires:	wayland-devel >= 1.0.0
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXfixes-devel
-Requires:	libva-drm >= 1.8.0
-Requires:	libva-wayland >= 1.8.0
-Requires:	libva-x11 >= 1.8.0
+Requires:	libva-drm >= %{libva_ver}
+Requires:	libva-wayland >= %{libva_ver}
+Requires:	libva-x11 >= %{libva_ver}
 Provides:	libva-tools = %{version}
 Obsoletes:	libva-tools < 1.8.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -71,7 +74,13 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/mpeg2vldemo
 %attr(755,root,root) %{_bindir}/putsurface
 %attr(755,root,root) %{_bindir}/putsurface_wayland
+%attr(755,root,root) %{_bindir}/sfcsample
 %attr(755,root,root) %{_bindir}/vainfo
 %attr(755,root,root) %{_bindir}/vavpp
 %attr(755,root,root) %{_bindir}/vp8enc
 %attr(755,root,root) %{_bindir}/vp9enc
+%attr(755,root,root) %{_bindir}/vppblending
+%attr(755,root,root) %{_bindir}/vppchromasitting
+%attr(755,root,root) %{_bindir}/vppdenoise
+%attr(755,root,root) %{_bindir}/vppscaling_csc
+%attr(755,root,root) %{_bindir}/vppsharpness
