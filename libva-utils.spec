@@ -15,6 +15,7 @@ BuildRequires:	automake
 BuildRequires:	libdrm-devel >= 2.4
 BuildRequires:	libtool >= 2:2
 BuildRequires:	libva-devel >= %{libva_ver}
+BuildRequires:	libva-drm-devel >= %{libva_ver}
 BuildRequires:	libva-wayland-devel >= %{libva_ver}
 BuildRequires:	libva-x11-devel >= %{libva_ver}
 BuildRequires:	pkgconfig
