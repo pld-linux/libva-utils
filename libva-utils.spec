@@ -2,17 +2,16 @@
 Summary:	VAAPI (Video Acceleration API) utilities
 Summary(pl.UTF-8):	VAAPI (Video Acceleration API) - programy narzędziowe
 Name:		libva-utils
-Version:	2.6.0
+Version:	2.8.0
 Release:	1
 License:	MIT
 Group:		Libraries
 #Source0Download: https://github.com/intel/libva-utils/releases
 Source0:	https://github.com/intel/libva-utils/releases/download/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	c69ffe308ae4204f59cffa53130d60b3
+# Source0-md5:	57a3b449f46f4800d0220338bd9e5858
 URL:		https://01.org/linuxmedia/vaapi
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
-BuildRequires:	libdrm-devel >= 2.4
 BuildRequires:	libtool >= 2:2
 BuildRequires:	libva-devel >= %{libva_ver}
 BuildRequires:	libva-drm-devel >= %{libva_ver}
@@ -24,8 +23,6 @@ BuildRequires:	pkgconfig(libva) >= 1.1.0
 # wayland-client
 BuildRequires:	wayland-devel >= 1.0.0
 BuildRequires:	xorg-lib-libX11-devel
-BuildRequires:	xorg-lib-libXext-devel
-BuildRequires:	xorg-lib-libXfixes-devel
 Requires:	libva-drm >= %{libva_ver}
 Requires:	libva-wayland >= %{libva_ver}
 Requires:	libva-x11 >= %{libva_ver}
