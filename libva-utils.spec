@@ -2,13 +2,13 @@
 Summary:	VAAPI (Video Acceleration API) utilities
 Summary(pl.UTF-8):	VAAPI (Video Acceleration API) - programy narzędziowe
 Name:		libva-utils
-Version:	2.14.0
+Version:	2.15.0
 Release:	1
 License:	MIT
 Group:		Libraries
 #Source0Download: https://github.com/intel/libva-utils/releases
 Source0:	https://github.com/intel/libva-utils/releases/download/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	07128cc08574ad686324d8ef3c0ef87d
+# Source0-md5:	d159ce641d99da3a52c1df54975cf5b4
 URL:		https://01.org/linuxmedia/vaapi
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -82,6 +82,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/vppblending
 %attr(755,root,root) %{_bindir}/vppchromasitting
 %attr(755,root,root) %{_bindir}/vppdenoise
+%attr(755,root,root) %{_bindir}/vpphdr_tm
 %attr(755,root,root) %{_bindir}/vppscaling_csc
 %attr(755,root,root) %{_bindir}/vppscaling_n_out_usrptr
 %attr(755,root,root) %{_bindir}/vppsharpness
